@@ -25,8 +25,8 @@ Initially, designed to write and share poetries, Open Forum is a creative writin
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ishaq-ansari/PoeticSouls.git
-   cd PoeticSouls
+   git clone https://github.com/ishaq-ansari/open-forum.git
+   cd open-forum
    ```
 2. Install dependencies:
    ```sh
