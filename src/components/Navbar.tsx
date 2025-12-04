@@ -36,12 +36,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700">
+    <header className="sticky top-0 z-50 bg-white/95 dark:bg-dark-800/95 backdrop-blur border-b border-gray-200 dark:border-dark-700">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-serif font-bold">
-              Poetic Souls
+              Open Forum
             </Link>
           </div>
 
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
                   className="btn btn-primary flex items-center space-x-2"
                 >
                   <PenSquare size={18} />
-                  <span>Write Poem</span>
+                  <span>Write </span>
                 </Link>
                 <div className="relative group">
                   <button className="flex items-center space-x-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-700">
@@ -85,10 +85,10 @@ const Navbar: React.FC = () => {
                       Profile
                     </Link>
                     <Link
-                      to="/my-poems"
+                      to="/my-posts"
                       className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-600"
                     >
-                      My Poems
+                      My Posts
                     </Link>
                     <Link
                       to="/bookmarks"
@@ -154,8 +154,12 @@ const Navbar: React.FC = () => {
                       )}
                     </div>
                     <div>
-                      <div className="font-medium">{profile?.display_name || profile?.username}</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">@{profile?.username}</div>
+                      <div className="font-medium">
+                        {profile?.display_name || profile?.username}
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        @{profile?.username}
+                      </div>
                     </div>
                   </div>
                   <Link
@@ -164,7 +168,7 @@ const Navbar: React.FC = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <PenSquare size={18} />
-                    <span>Write Poem</span>
+                    <span>Write</span>
                   </Link>
                   <Link
                     to="/profile"
@@ -174,11 +178,11 @@ const Navbar: React.FC = () => {
                     Profile
                   </Link>
                   <Link
-                    to="/my-poems"
+                    to="/my-posts"
                     className="px-2 py-3 hover:bg-gray-100 dark:hover:bg-dark-700 rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    My Poems
+                    My Posts
                   </Link>
                   <Link
                     to="/bookmarks"

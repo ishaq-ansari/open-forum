@@ -1,5 +1,5 @@
 /*
-  # Initial Schema for Poetic Souls
+  # Initial Schema for Open Forum
 
   1. New Tables
     - `profiles` - User profiles with username, display name, avatar, and bio

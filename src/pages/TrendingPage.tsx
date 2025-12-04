@@ -6,10 +6,10 @@ import PoemCard from '../components/PoemCard';
 import { usePoemStore } from '../lib/store';
 
 const categories = [
-  { name: 'Feed', path: '/' },
-  { name: 'Trending', path: '/trending' },
-  { name: 'Challenges', path: '/challenges' },
-  { name: 'My Poems', path: '/my-poems' },
+  { name: "Feed", path: "/" },
+  { name: "Trending", path: "/trending" },
+  { name: "Challenges", path: "/challenges" },
+  { name: "My Posts", path: "/my-posts" },
 ];
 
 const TrendingPage: React.FC = () => {
