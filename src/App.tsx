@@ -56,7 +56,7 @@ function App() {
       <Routes>
         {/* Auth routes outside layout */}
         <Route path="/auth/callback" element={<AuthCallbackPage />} />
-        
+
         <Route path="/" element={<Layout />}>
           {/* Public routes */}
           <Route index element={<HomePage />} />
@@ -65,35 +65,47 @@ function App() {
           <Route path="tag/:tagName" element={<TagPage />} />
           <Route path="poem/:id" element={<PoemDetailPage />} />
           <Route path="profile/:id" element={<ProfilePage />} />
-          
+
           {/* Auth routes */}
           <Route path="signin" element={<SignInPage />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route path="forgot-password" element={<ForgotPasswordPage />} />
           <Route path="reset-password" element={<ResetPasswordPage />} />
           <Route path="verify-email" element={<EmailVerificationPage />} />
-          
+
           {/* Protected routes */}
-          <Route path="my-poems" element={
-            <ProtectedRoute>
-              <MyPoemsPage />
-            </ProtectedRoute>
-          } />
-          <Route path="write" element={
-            <ProtectedRoute>
-              <WritePoemPage />
-            </ProtectedRoute>
-          } />
-          <Route path="profile" element={
-            <ProtectedRoute>
-              <ProfilePage />
-            </ProtectedRoute>
-          } />
-          <Route path="bookmarks" element={
-            <ProtectedRoute>
-              <BookmarksPage />
-            </ProtectedRoute>
-          } />
+          <Route
+            path="my-posts"
+            element={
+              <ProtectedRoute>
+                <MyPoemsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="write"
+            element={
+              <ProtectedRoute>
+                <WritePoemPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="bookmarks"
+            element={
+              <ProtectedRoute>
+                <BookmarksPage />
+              </ProtectedRoute>
+            }
+          />
         </Route>
       </Routes>
     </Router>

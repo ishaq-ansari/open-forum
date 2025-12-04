@@ -6,10 +6,10 @@ import PoemCard from '../components/PoemCard';
 import { useAuthStore, usePoemStore } from '../lib/store';
 
 const categories = [
-  { name: 'Feed', path: '/' },
-  { name: 'Trending', path: '/trending' },
-  { name: 'Challenges', path: '/challenges' },
-  { name: 'My Poems', path: '/my-poems' },
+  { name: "Feed", path: "/" },
+  { name: "Trending", path: "/trending" },
+  { name: "Challenges", path: "/challenges" },
+  { name: "My Posts", path: "/my-posts" },
 ];
 
 const MyPoemsPage: React.FC = () => {
@@ -39,15 +39,18 @@ const MyPoemsPage: React.FC = () => {
   return (
     <div>
       <CategoryTabs categories={categories} />
-      
+
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-serif font-bold">My Poems</h1>
-        <Link to="/write" className="btn btn-primary flex items-center space-x-2">
+        <h1 className="text-2xl font-serif font-bold">My Posts</h1>
+        <Link
+          to="/write"
+          className="btn btn-primary flex items-center space-x-2"
+        >
           <PenSquare size={18} />
-          <span>Write New Poem</span>
+          <span>Write New Post</span>
         </Link>
       </div>
-      
+
       {isLoading ? (
         <div className="flex justify-center py-12">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600"></div>
@@ -60,7 +63,9 @@ const MyPoemsPage: React.FC = () => {
         </div>
       ) : (
         <div className="text-center py-12 card">
-          <p className="text-gray-600 dark:text-gray-400 mb-4">You haven't written any poems yet</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            You haven't written any poems yet
+          </p>
           <Link to="/write" className="btn btn-primary">
             Write your first poem
           </Link>
